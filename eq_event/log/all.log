@@ -1,0 +1,22 @@
+2016-03-16 11:30:00,691 - tornado.application - ERROR - Uncaught exception GET /index (::1)
+HTTPServerRequest(protocol='http', host='localhost:888', method='GET', uri='/index', version='HTTP/1.1', remote_ip='::1', headers={'Accept-Language': 'zh-CN,zh;q=0.8', 'Accept-Encoding': 'gzip,deflate,sdch', 'Host': 'localhost:888', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36', 'Connection': 'keep-alive'})
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\tornado-4.3-py2.7-win32.egg\tornado\web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "F:\Solutions\ServerSolution\OrgAppServerPC\handlers\index.py", line 16, in get
+    accesss_log.info('test indexhandler logger')
+NameError: global name 'accesss_log' is not defined
+2016-03-16 11:30:00,737 - tornado.access - ERROR - 500 GET /index (::1) 46.00ms
+2016-03-16 11:30:00,848 - tornado.access - WARNING - 404 GET /favicon.ico (::1) 19.00ms
+2016-03-16 11:30:22,260 - tornado.access - INFO - 200 GET /index (::1) 23.00ms
+2016-03-18 17:11:23,387 - tornado.access - INFO - 200 POST /pullallorg (127.0.0.1) 3.00ms
+2016-03-20 10:34:45,339 - tornado.access - INFO - 200 POST /pullallorg (127.0.0.1) 26.00ms
+2016-03-20 10:35:06,938 - tornado.access - INFO - 200 POST /pullallorg (127.0.0.1) 12.00ms
+2016-03-20 10:36:23,160 - tornado.access - INFO - 200 POST /pullallorg (127.0.0.1) 21511.00ms
+2016-03-20 10:39:56,549 - tornado.access - INFO - 200 POST /pullallorg (127.0.0.1) 21.00ms
+2016-03-20 10:40:39,094 - tornado.access - INFO - 200 POST /pullallorg (127.0.0.1) 11.00ms
+2016-03-20 10:40:46,197 - tornado.access - INFO - 200 POST /pullallorg (127.0.0.1) 12.00ms
+2016-03-20 10:40:58,351 - tornado.access - INFO - 200 POST /pullallorg (127.0.0.1) 10.00ms
+2016-03-20 10:44:31,209 - tornado.access - INFO - 200 POST /pullallorg (127.0.0.1) 7.00ms
+2016-03-20 10:44:45,680 - tornado.access - INFO - 200 POST /pullallorg (127.0.0.1) 5.00ms
+2016-03-20 21:09:30,950 - tornado.access - INFO - 200 POST /pullcreateactdetail (127.0.0.1) 64118.00ms

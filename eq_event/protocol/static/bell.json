@@ -1,0 +1,918 @@
+﻿{
+  "PinaoBlocks": {
+    "-BeatDelta": "1000",
+    "-BeatType": "4",
+    "PinaoBlock": [
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "44"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "44"
+          }
+        ]
+      },
+      {
+        "PinaoChord": {
+          "-beattime": "4",
+          "PinaoKey": "44"
+        }
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "44"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "44"
+          }
+        ]
+      },
+      {
+        "PinaoChord": {
+          "-beattime": "4",
+          "PinaoKey": "44"
+        }
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "3",
+            "PinaoKey": "44"
+          },
+          {
+            "-beattime": "1",
+            "PinaoKey": "47"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "3",
+            "PinaoKey": "40"
+          },
+          {
+            "-beattime": "1",
+            "PinaoKey": "42"
+          }
+        ]
+      },
+      {
+        "PinaoChord": {
+          "-beattime": "8",
+          "PinaoKey": "44"
+        }
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "45"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "45"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "3",
+            "PinaoKey": "45"
+          },
+          {
+            "-beattime": "1",
+            "PinaoKey": "45"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "3",
+            "PinaoKey": "45"
+          },
+          {
+            "-beattime": "1",
+            "PinaoKey": "44"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "44"
+          },
+          {
+            "-beattime": "1",
+            "PinaoKey": "44"
+          },
+          {
+            "-beattime": "1",
+            "PinaoKey": "44"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "44"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "42"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "42"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "40"
+          }
+        ]
+      },
+      {
+        "PinaoChord": {
+          "-beattime": "4",
+          "PinaoKey": "42"
+        }
+      },
+      {
+        "PinaoChord": {
+          "-beattime": "4",
+          "PinaoKey": "47"
+        }
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "44"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "44"
+          }
+        ]
+      },
+      {
+        "PinaoChord": {
+          "-beattime": "4",
+          "PinaoKey": "44"
+        }
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "44"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "44"
+          }
+        ]
+      },
+      {
+        "PinaoChord": {
+          "-beattime": "4",
+          "PinaoKey": "44"
+        }
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "3",
+            "PinaoKey": "44"
+          },
+          {
+            "-beattime": "1",
+            "PinaoKey": "47"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "3",
+            "PinaoKey": "40"
+          },
+          {
+            "-beattime": "1",
+            "PinaoKey": "42"
+          }
+        ]
+      },
+      {
+        "PinaoChord": {
+          "-beattime": "8",
+          "PinaoKey": "44"
+        }
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "45"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "45"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "3",
+            "PinaoKey": "45"
+          },
+          {
+            "-beattime": "1",
+            "PinaoKey": "45"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "3",
+            "PinaoKey": "45"
+          },
+          {
+            "-beattime": "1",
+            "PinaoKey": "44"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "44"
+          },
+          {
+            "-beattime": "1",
+            "PinaoKey": "44"
+          },
+          {
+            "-beattime": "1",
+            "PinaoKey": "44"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "47"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "47"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "45"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "42"
+          }
+        ]
+      },
+      {
+        "PinaoChord": {
+          "-beattime": "8",
+          "PinaoKey": "40"
+        }
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "47"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "47"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "44"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "42"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "40"
+          },
+          {
+            "-beattime": "4",
+            "PinaoKey": "47"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "47"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "47"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "44"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "42"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "40"
+          },
+          {
+            "-beattime": "4",
+            "PinaoKey": "49"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "49"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "49"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "45"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "44"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "42"
+          },
+          {
+            "-beattime": "4",
+            "PinaoKey": "51"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "47"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "47"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "45"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "42"
+          }
+        ]
+      },
+      {
+        "PinaoChord": {
+          "-beattime": "4",
+          "PinaoKey": "44"
+        }
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "40"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "47"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "47"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "47"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "44"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "42"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "40"
+          },
+          {
+            "-beattime": "4",
+            "PinaoKey": "47"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "47"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "47"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "44"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "42"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "40"
+          },
+          {
+            "-beattime": "4",
+            "PinaoKey": "49"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "49"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "49"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "45"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "44"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "42"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "47"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "47"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "47"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "47"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "49"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "47"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "45"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "42"
+          },
+          {
+            "-beattime": "4",
+            "PinaoKey": "40"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "44"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "44"
+          }
+        ]
+      },
+      {
+        "PinaoChord": {
+          "-beattime": "4",
+          "PinaoKey": "44"
+        }
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "44"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "44"
+          }
+        ]
+      },
+      {
+        "PinaoChord": {
+          "-beattime": "4",
+          "PinaoKey": "44"
+        }
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "3",
+            "PinaoKey": "44"
+          },
+          {
+            "-beattime": "1",
+            "PinaoKey": "47"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "3",
+            "PinaoKey": "40"
+          },
+          {
+            "-beattime": "1",
+            "PinaoKey": "42"
+          }
+        ]
+      },
+      {
+        "PinaoChord": {
+          "-beattime": "8",
+          "PinaoKey": "44"
+        }
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "45"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "45"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "3",
+            "PinaoKey": "45"
+          },
+          {
+            "-beattime": "1",
+            "PinaoKey": "45"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "3",
+            "PinaoKey": "45"
+          },
+          {
+            "-beattime": "1",
+            "PinaoKey": "44"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "44"
+          },
+          {
+            "-beattime": "1",
+            "PinaoKey": "44"
+          },
+          {
+            "-beattime": "1",
+            "PinaoKey": "44"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "44"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "42"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "42"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "40"
+          }
+        ]
+      },
+      {
+        "PinaoChord": {
+          "-beattime": "4",
+          "PinaoKey": "42"
+        }
+      },
+      {
+        "PinaoChord": {
+          "-beattime": "4",
+          "PinaoKey": "47"
+        }
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "44"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "44"
+          }
+        ]
+      },
+      {
+        "PinaoChord": {
+          "-beattime": "4",
+          "PinaoKey": "44"
+        }
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "44"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "44"
+          }
+        ]
+      },
+      {
+        "PinaoChord": {
+          "-beattime": "4",
+          "PinaoKey": "44"
+        }
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "3",
+            "PinaoKey": "44"
+          },
+          {
+            "-beattime": "1",
+            "PinaoKey": "47"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "3",
+            "PinaoKey": "40"
+          },
+          {
+            "-beattime": "1",
+            "PinaoKey": "42"
+          }
+        ]
+      },
+      {
+        "PinaoChord": {
+          "-beattime": "8",
+          "PinaoKey": "44"
+        }
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "45"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "45"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "3",
+            "PinaoKey": "45"
+          },
+          {
+            "-beattime": "1",
+            "PinaoKey": "45"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "3",
+            "PinaoKey": "45"
+          },
+          {
+            "-beattime": "1",
+            "PinaoKey": "44"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "44"
+          },
+          {
+            "-beattime": "1",
+            "PinaoKey": "44"
+          },
+          {
+            "-beattime": "1",
+            "PinaoKey": "44"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "47"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "47"
+          }
+        ]
+      },
+      {
+        "PinaoChord": [
+          {
+            "-beattime": "2",
+            "PinaoKey": "49"
+          },
+          {
+            "-beattime": "2",
+            "PinaoKey": "51"
+          }
+        ]
+      },
+      {
+        "PinaoChord": {
+          "-beattime": "8",
+          "PinaoKey": "40"
+        }
+      }
+    ]
+  }
+}

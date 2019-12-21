@@ -1,0 +1,412 @@
+2016-03-02 11:04:37,492 - tornado.access - INFO - 200 POST /register (127.0.0.1) 165.00ms
+2016-03-02 11:04:52,872 - tornado.access - INFO - 200 POST /register (127.0.0.1) 9.00ms
+2016-03-02 11:15:18,151 - tornado.application - ERROR - Uncaught exception POST /register (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:888', method='POST', uri='/register', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'X-Unity-Version': '4.6.1f1', 'Content-Length': '88', 'Accept-Encoding': 'identity', 'Accept': '*/*', 'User-Agent': 'UnityPlayer/4.6.1f1 (http://unity3d.com)', 'Host': 'localhost:888', 'Content-Type': 'application/x-www-form-urlencoded'})
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\tornado-4.3-py2.7-win32.egg\tornado\web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "F:/Solutions/ServerSolution/OrgAppServerPC\handlers\register.py", line 36, in post
+    ur = Dal_User().getUserByAttr('id',(int)(post_data['id']))
+  File "F:/Solutions/ServerSolution/OrgAppServerPC\dal\dal_user.py", line 45, in getUserByAttr
+    for k, v in self._m_user:
+TypeError: 'long' object is not iterable
+2016-03-02 11:15:18,167 - tornado.access - ERROR - 500 POST /register (127.0.0.1) 19.00ms
+2016-03-02 11:15:42,015 - tornado.application - ERROR - Uncaught exception POST /register (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:888', method='POST', uri='/register', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'X-Unity-Version': '4.6.1f1', 'Content-Length': '88', 'Accept-Encoding': 'identity', 'Accept': '*/*', 'User-Agent': 'UnityPlayer/4.6.1f1 (http://unity3d.com)', 'Host': 'localhost:888', 'Content-Type': 'application/x-www-form-urlencoded'})
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\tornado-4.3-py2.7-win32.egg\tornado\web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "F:/Solutions/ServerSolution/OrgAppServerPC\handlers\register.py", line 36, in post
+    ur = Dal_User().getUserByAttr('id',(int)(post_data['id']))
+  File "F:/Solutions/ServerSolution/OrgAppServerPC\dal\dal_user.py", line 45, in getUserByAttr
+    for k, v in self._m_user:
+TypeError: 'long' object is not iterable
+2016-03-02 11:15:42,016 - tornado.access - ERROR - 500 POST /register (127.0.0.1) 11855.00ms
+2016-03-02 11:26:13,365 - tornado.application - ERROR - Uncaught exception POST /register (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:888', method='POST', uri='/register', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'X-Unity-Version': '4.6.1f1', 'Content-Length': '30', 'Accept-Encoding': 'identity', 'Accept': '*/*', 'User-Agent': 'UnityPlayer/4.6.1f1 (http://unity3d.com)', 'Host': 'localhost:888', 'Content-Type': 'application/x-www-form-urlencoded'})
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\tornado-4.3-py2.7-win32.egg\tornado\web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "F:\Solutions\ServerSolution\OrgAppServerPC\handlers\register.py", line 52, in post
+    um = Officer(id=(int)(post_data['id']), name= post_data['name'],
+KeyError: 'name'
+2016-03-02 11:26:13,365 - tornado.access - ERROR - 500 POST /register (127.0.0.1) 2.00ms
+2016-03-02 11:27:55,986 - tornado.access - INFO - 200 POST /register (127.0.0.1) 36.00ms
+2016-03-02 11:28:00,459 - tornado.access - INFO - 200 POST /register (127.0.0.1) 0.00ms
+2016-03-02 11:29:49,295 - tornado.access - INFO - 200 POST /login (127.0.0.1) 0.00ms
+2016-03-02 11:30:38,073 - tornado.access - INFO - 200 POST /login (127.0.0.1) 5.00ms
+2016-03-02 11:31:16,733 - tornado.access - INFO - 200 POST /login (127.0.0.1) 5.00ms
+2016-03-02 11:33:37,430 - tornado.general - WARNING - multipart/form-data missing headers
+2016-03-02 11:33:37,430 - tornado.application - ERROR - Uncaught exception POST /updateuser (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:888', method='POST', uri='/updateuser', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'X-Unity-Version': '4.6.1f1', 'Content-Length': '95483', 'Accept-Encoding': 'identity', 'Accept': '*/*', 'User-Agent': 'UnityPlayer/4.6.1f1 (http://unity3d.com)', 'Host': 'localhost:888', 'Expect': '100-continue', 'Content-Type': 'multipart/form-data; boundary="lGQ5ROs5y7HOQPfRMVrOnTLejhaUYZgU5NEin0fC"'})
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\tornado-4.3-py2.7-win32.egg\tornado\web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "F:\Solutions\ServerSolution\OrgAppServerPC\handlers\updateuser.py", line 46, in post
+    os.mkdir(upload_path)
+WindowsError: [Error 3] : 'F:\\Solutions\\ServerSolution\\OrgAppServerPC\\userPhotos\\20160001'
+2016-03-02 11:33:37,441 - tornado.access - ERROR - 500 POST /updateuser (127.0.0.1) 13.00ms
+2016-03-02 11:34:43,440 - tornado.general - WARNING - multipart/form-data missing headers
+2016-03-02 11:35:09,036 - tornado.general - WARNING - multipart/form-data missing headers
+2016-03-02 11:38:01,828 - tornado.general - WARNING - multipart/form-data missing headers
+2016-03-02 11:38:41,303 - tornado.access - INFO - 200 POST /updateuser (127.0.0.1) 39479.00ms
+2016-03-02 18:08:16,181 - tornado.access - INFO - 200 POST /createorg (127.0.0.1) 125.00ms
+2016-03-02 20:05:02,105 - tornado.access - INFO - 200 POST /createorg (127.0.0.1) 77.00ms
+2016-03-02 20:12:03,543 - tornado.access - INFO - 200 POST /createorg (127.0.0.1) 41600.00ms
+2016-03-02 20:12:53,507 - tornado.application - ERROR - Uncaught exception POST /createact (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:888', method='POST', uri='/createact', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'X-Unity-Version': '4.6.1f1', 'Content-Length': '147', 'Accept-Encoding': 'identity', 'Accept': '*/*', 'User-Agent': 'UnityPlayer/4.6.1f1 (http://unity3d.com)', 'Host': 'localhost:888', 'Content-Type': 'application/x-www-form-urlencoded'})
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\tornado-4.3-py2.7-win32.egg\tornado\web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "F:/Solutions/ServerSolution/OrgAppServerPC\handlers\createactHandler.py", line 47, in post
+    level = post_data['level'], summary = post_data['summary'],
+KeyError: 'summary'
+2016-03-02 20:12:53,523 - tornado.access - ERROR - 500 POST /createact (127.0.0.1) 16.00ms
+2016-03-02 20:13:07,157 - tornado.application - ERROR - Uncaught exception POST /createact (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:888', method='POST', uri='/createact', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'X-Unity-Version': '4.6.1f1', 'Content-Length': '147', 'Accept-Encoding': 'identity', 'Accept': '*/*', 'User-Agent': 'UnityPlayer/4.6.1f1 (http://unity3d.com)', 'Host': 'localhost:888', 'Content-Type': 'application/x-www-form-urlencoded'})
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\tornado-4.3-py2.7-win32.egg\tornado\web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "F:/Solutions/ServerSolution/OrgAppServerPC\handlers\createactHandler.py", line 47, in post
+    level = post_data['level'], summary = post_data['summary'],
+KeyError: 'summary'
+2016-03-02 20:13:07,158 - tornado.access - ERROR - 500 POST /createact (127.0.0.1) 3.00ms
+2016-03-02 20:13:13,167 - tornado.application - ERROR - Uncaught exception POST /createact (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:888', method='POST', uri='/createact', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'X-Unity-Version': '4.6.1f1', 'Content-Length': '147', 'Accept-Encoding': 'identity', 'Accept': '*/*', 'User-Agent': 'UnityPlayer/4.6.1f1 (http://unity3d.com)', 'Host': 'localhost:888', 'Content-Type': 'application/x-www-form-urlencoded'})
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\tornado-4.3-py2.7-win32.egg\tornado\web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "F:/Solutions/ServerSolution/OrgAppServerPC\handlers\createactHandler.py", line 47, in post
+    level = post_data['level'], summary = post_data['summary'],
+KeyError: 'summary'
+2016-03-02 20:13:13,168 - tornado.access - ERROR - 500 POST /createact (127.0.0.1) 2.00ms
+2016-03-02 20:13:36,496 - tornado.application - ERROR - Uncaught exception POST /createact (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:888', method='POST', uri='/createact', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'X-Unity-Version': '4.6.1f1', 'Content-Length': '147', 'Accept-Encoding': 'identity', 'Accept': '*/*', 'User-Agent': 'UnityPlayer/4.6.1f1 (http://unity3d.com)', 'Host': 'localhost:888', 'Content-Type': 'application/x-www-form-urlencoded'})
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\tornado-4.3-py2.7-win32.egg\tornado\web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "F:/Solutions/ServerSolution/OrgAppServerPC\handlers\createactHandler.py", line 47, in post
+    level = post_data['level'], summary = post_data['summary'],
+KeyError: 'summary'
+2016-03-02 20:13:36,497 - tornado.access - ERROR - 500 POST /createact (127.0.0.1) 5.00ms
+2016-03-02 20:17:35,516 - tornado.access - INFO - 200 POST /createact (127.0.0.1) 34665.00ms
+2016-03-02 20:32:30,025 - tornado.access - INFO - 200 POST /approveorg (127.0.0.1) 14960.00ms
+2016-03-02 20:53:52,811 - tornado.application - ERROR - Uncaught exception POST /approveact (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:888', method='POST', uri='/approveact', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'X-Unity-Version': '4.6.1f1', 'Content-Length': '46', 'Accept-Encoding': 'identity', 'Accept': '*/*', 'User-Agent': 'UnityPlayer/4.6.1f1 (http://unity3d.com)', 'Host': 'localhost:888', 'Content-Type': 'application/x-www-form-urlencoded'})
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\tornado-4.3-py2.7-win32.egg\tornado\web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "F:/Solutions/ServerSolution/OrgAppServerPC\handlers\approveCreateAct.py", line 42, in post
+    idlist = Utils().decodeIDFormat(post_data['createactlist'])
+KeyError: 'createactlist'
+2016-03-02 20:53:52,812 - tornado.access - ERROR - 500 POST /approveact (127.0.0.1) 11.00ms
+2016-03-02 20:55:08,428 - tornado.access - INFO - 200 POST /approveact (127.0.0.1) 75.00ms
+2016-03-02 20:56:08,181 - tornado.access - INFO - 200 POST /approveact (127.0.0.1) 299.00ms
+2016-03-02 21:07:10,323 - tornado.access - INFO - 200 POST /approveact (127.0.0.1) 94.00ms
+2016-03-02 21:08:24,246 - tornado.access - INFO - 200 POST /approveact (127.0.0.1) 104.00ms
+2016-03-03 09:45:41,188 - tornado.access - INFO - 200 POST /register (127.0.0.1) 6424.00ms
+2016-03-03 10:09:32,727 - tornado.access - INFO - 200 POST /register (127.0.0.1) 56.00ms
+2016-03-03 10:09:32,783 - tornado.access - INFO - 200 POST /register (127.0.0.1) 55.00ms
+2016-03-03 10:09:37,878 - tornado.access - INFO - 200 POST /register (127.0.0.1) 61.00ms
+2016-03-03 10:09:49,168 - tornado.access - INFO - 200 POST /createorg (127.0.0.1) 100.00ms
+2016-03-03 10:10:19,102 - tornado.application - ERROR - Uncaught exception POST /approveorg (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:888', method='POST', uri='/approveorg', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'X-Unity-Version': '4.6.1f1', 'Content-Length': '54', 'Accept-Encoding': 'identity', 'Accept': '*/*', 'User-Agent': 'UnityPlayer/4.6.1f1 (http://unity3d.com)', 'Host': 'localhost:888', 'Content-Type': 'application/x-www-form-urlencoded'})
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\tornado-4.3-py2.7-win32.egg\tornado\web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "F:\Solutions\ServerSolution\OrgAppServerPC\handlers\approveCreateOrg.py", line 48, in post
+    if co.state == configs_org['applystate']['none']:
+AttributeError: 'NoneType' object has no attribute 'state'
+2016-03-03 10:10:19,114 - tornado.access - ERROR - 500 POST /approveorg (127.0.0.1) 142.00ms
+2016-03-03 10:12:34,933 - tornado.access - INFO - 200 POST /register (127.0.0.1) 76.00ms
+2016-03-03 10:12:34,996 - tornado.access - INFO - 200 POST /register (127.0.0.1) 60.00ms
+2016-03-03 10:12:44,502 - tornado.access - INFO - 200 POST /register (127.0.0.1) 5077.00ms
+2016-03-03 10:13:02,157 - tornado.access - INFO - 200 POST /createorg (127.0.0.1) 6249.00ms
+2016-03-03 10:21:53,868 - tornado.access - INFO - 200 POST /register (127.0.0.1) 73.00ms
+2016-03-03 10:21:53,907 - tornado.access - INFO - 200 POST /register (127.0.0.1) 38.00ms
+2016-03-03 10:21:58,210 - tornado.access - INFO - 200 POST /register (127.0.0.1) 48.00ms
+2016-03-03 10:22:05,548 - tornado.access - INFO - 200 POST /createorg (127.0.0.1) 299.00ms
+2016-03-03 10:22:09,071 - tornado.access - INFO - 200 POST /approveorg (127.0.0.1) 222.00ms
+2016-03-03 10:22:33,038 - tornado.access - INFO - 200 POST /createact (127.0.0.1) 73.00ms
+2016-03-03 10:22:36,157 - tornado.access - INFO - 200 POST /approveact (127.0.0.1) 87.00ms
+2016-03-03 10:25:47,970 - tornado.application - ERROR - Uncaught exception POST /joinorg (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:888', method='POST', uri='/joinorg', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'X-Unity-Version': '4.6.1f1', 'Content-Length': '94', 'Accept-Encoding': 'identity', 'Accept': '*/*', 'User-Agent': 'UnityPlayer/4.6.1f1 (http://unity3d.com)', 'Host': 'localhost:888', 'Content-Type': 'application/x-www-form-urlencoded'})
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\tornado-4.3-py2.7-win32.egg\tornado\web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "F:/Solutions/ServerSolution/OrgAppServerPC\handlers\applyjoinOrgHandler.py", line 47, in post
+    newApplyOrg = OrgApply(applyer = user.id,reason = post_data['reason'],optype = post_data['optype'],state = configs_org['applystate']['none'])
+NameError: global name 'configs_org' is not defined
+2016-03-03 10:25:47,990 - tornado.access - ERROR - 500 POST /joinorg (127.0.0.1) 22.00ms
+2016-03-03 11:05:15,717 - tornado.access - INFO - 200 POST /joinorg (127.0.0.1) 25850.00ms
+2016-03-03 11:14:59,140 - tornado.access - INFO - 200 POST /joinact (127.0.0.1) 125.00ms
+2016-03-03 11:21:47,578 - tornado.access - INFO - 200 POST /approvejoinorg (127.0.0.1) 19441.00ms
+2016-03-03 11:25:09,773 - tornado.access - INFO - 200 POST /joinact (127.0.0.1) 3.00ms
+2016-03-03 11:25:36,996 - tornado.access - INFO - 200 POST /approvejoinact (127.0.0.1) 99.00ms
+2016-03-03 11:26:05,736 - tornado.access - INFO - 200 POST /approvejoinact (127.0.0.1) 2.00ms
+2016-03-03 11:26:42,641 - tornado.access - INFO - 200 POST /register (127.0.0.1) 101.00ms
+2016-03-03 11:26:42,687 - tornado.access - INFO - 200 POST /register (127.0.0.1) 46.00ms
+2016-03-03 11:26:47,111 - tornado.access - INFO - 200 POST /register (127.0.0.1) 48.00ms
+2016-03-03 11:26:55,703 - tornado.access - INFO - 200 POST /createorg (127.0.0.1) 109.00ms
+2016-03-03 11:26:58,369 - tornado.access - INFO - 200 POST /createact (127.0.0.1) 87.00ms
+2016-03-03 11:27:01,260 - tornado.access - INFO - 200 POST /approveorg (127.0.0.1) 164.00ms
+2016-03-03 11:27:03,615 - tornado.access - INFO - 200 POST /approveact (127.0.0.1) 90.00ms
+2016-03-03 11:27:06,923 - tornado.application - ERROR - Uncaught exception POST /joinorg (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:888', method='POST', uri='/joinorg', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'X-Unity-Version': '4.6.1f1', 'Content-Length': '94', 'Accept-Encoding': 'identity', 'Accept': '*/*', 'User-Agent': 'UnityPlayer/4.6.1f1 (http://unity3d.com)', 'Host': 'localhost:888', 'Content-Type': 'application/x-www-form-urlencoded'})
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\tornado-4.3-py2.7-win32.egg\tornado\web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "F:\Solutions\ServerSolution\OrgAppServerPC\handlers\applyjoinOrgHandler.py", line 55, in post
+    if  Utils().isNull(org.applylist):
+  File "F:\Solutions\ServerSolution\OrgAppServerPC\orm\orm.py", line 56, in __getattr__
+    raise AttributeError(r"'Model' object has no attribute '%s'" % key)
+AttributeError: 'Model' object has no attribute 'applylist'
+2016-03-03 11:27:06,924 - tornado.access - ERROR - 500 POST /joinorg (127.0.0.1) 54.00ms
+2016-03-03 11:28:08,719 - tornado.access - INFO - 200 POST /joinorg (127.0.0.1) 37922.00ms
+2016-03-03 11:28:39,581 - tornado.access - INFO - 200 POST /register (127.0.0.1) 40.00ms
+2016-03-03 11:28:39,647 - tornado.access - INFO - 200 POST /register (127.0.0.1) 65.00ms
+2016-03-03 11:28:42,693 - tornado.access - INFO - 200 POST /register (127.0.0.1) 37.00ms
+2016-03-03 11:28:45,654 - tornado.access - INFO - 200 POST /createorg (127.0.0.1) 132.00ms
+2016-03-03 11:28:54,369 - tornado.access - INFO - 200 POST /createact (127.0.0.1) 6150.00ms
+2016-03-03 11:29:13,355 - tornado.access - INFO - 200 POST /approveorg (127.0.0.1) 5246.00ms
+2016-03-03 11:29:22,904 - tornado.access - INFO - 200 POST /approveact (127.0.0.1) 183.00ms
+2016-03-03 11:31:45,174 - tornado.access - INFO - 200 POST /register (127.0.0.1) 281.00ms
+2016-03-03 11:31:45,250 - tornado.access - INFO - 200 POST /register (127.0.0.1) 72.00ms
+2016-03-03 11:31:50,071 - tornado.access - INFO - 200 POST /register (127.0.0.1) 37.00ms
+2016-03-03 11:31:52,621 - tornado.access - INFO - 200 POST /createorg (127.0.0.1) 93.00ms
+2016-03-03 11:31:59,829 - tornado.access - INFO - 200 POST /createact (127.0.0.1) 5030.00ms
+2016-03-03 11:32:09,813 - tornado.access - INFO - 200 POST /approveorg (127.0.0.1) 139.00ms
+2016-03-03 11:32:11,974 - tornado.access - INFO - 200 POST /approveact (127.0.0.1) 124.00ms
+2016-03-03 11:35:11,174 - tornado.access - INFO - 200 POST /register (127.0.0.1) 51.00ms
+2016-03-03 11:35:11,262 - tornado.access - INFO - 200 POST /register (127.0.0.1) 86.00ms
+2016-03-03 11:35:14,631 - tornado.access - INFO - 200 POST /register (127.0.0.1) 74.00ms
+2016-03-03 11:35:18,961 - tornado.access - INFO - 200 POST /createorg (127.0.0.1) 208.00ms
+2016-03-03 11:35:21,086 - tornado.access - INFO - 200 POST /createact (127.0.0.1) 113.00ms
+2016-03-03 11:35:24,312 - tornado.access - INFO - 200 POST /approveorg (127.0.0.1) 135.00ms
+2016-03-03 11:35:26,790 - tornado.access - INFO - 200 POST /approveact (127.0.0.1) 122.00ms
+2016-03-03 11:35:36,937 - tornado.access - INFO - 200 POST /joinorg (127.0.0.1) 5449.00ms
+2016-03-03 11:35:57,010 - tornado.access - INFO - 200 POST /approvejoinorg (127.0.0.1) 4287.00ms
+2016-03-03 16:41:59,492 - tornado.access - INFO - 200 POST /register (127.0.0.1) 60.00ms
+2016-03-03 16:41:59,539 - tornado.access - INFO - 200 POST /register (127.0.0.1) 46.00ms
+2016-03-03 16:42:03,200 - tornado.access - INFO - 200 POST /register (127.0.0.1) 103.00ms
+2016-03-03 16:42:07,615 - tornado.application - ERROR - Uncaught exception POST /createorg (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:888', method='POST', uri='/createorg', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'X-Unity-Version': '4.6.1f1', 'Content-Length': '245', 'Accept-Encoding': 'identity', 'Accept': '*/*', 'User-Agent': 'UnityPlayer/4.6.1f1 (http://unity3d.com)', 'Host': 'localhost:888', 'Content-Type': 'application/x-www-form-urlencoded'})
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\tornado-4.3-py2.7-win32.egg\tornado\web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "F:\Solutions\ServerSolution\OrgAppServerPC\handlers\createorgHandler.py", line 55, in post
+    Dal_User().updateUser(user.id,**updateArgs)
+  File "F:\Solutions\ServerSolution\OrgAppServerPC\dal\dal_user.py", line 31, in updateUser
+    if field.instance == 'int':
+AttributeError: 'str' object has no attribute 'instance'
+2016-03-03 16:42:07,618 - tornado.access - ERROR - 500 POST /createorg (127.0.0.1) 93.00ms
+2016-03-03 20:22:37,440 - tornado.access - INFO - 200 POST /register (127.0.0.1) 52.00ms
+2016-03-03 20:22:37,479 - tornado.access - INFO - 200 POST /register (127.0.0.1) 38.00ms
+2016-03-03 20:22:41,822 - tornado.access - INFO - 200 POST /register (127.0.0.1) 54.00ms
+2016-03-03 20:22:45,006 - tornado.access - INFO - 200 POST /createorg (127.0.0.1) 64.00ms
+2016-03-03 20:22:47,516 - tornado.access - INFO - 200 POST /createact (127.0.0.1) 82.00ms
+2016-03-03 20:22:50,413 - tornado.access - INFO - 200 POST /approveorg (127.0.0.1) 0.00ms
+2016-03-03 20:22:53,217 - tornado.access - INFO - 200 POST /approveact (127.0.0.1) 0.00ms
+2016-03-03 20:22:56,477 - tornado.application - ERROR - Uncaught exception POST /joinact (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:888', method='POST', uri='/joinact', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'X-Unity-Version': '4.6.1f1', 'Content-Length': '94', 'Accept-Encoding': 'identity', 'Accept': '*/*', 'User-Agent': 'UnityPlayer/4.6.1f1 (http://unity3d.com)', 'Host': 'localhost:888', 'Content-Type': 'application/x-www-form-urlencoded'})
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\tornado-4.3-py2.7-win32.egg\tornado\web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "F:\Solutions\ServerSolution\OrgAppServerPC\handlers\applyjoinActHandler.py", line 57, in post
+    if  Utils().isNull(act.applylist):
+  File "F:\Solutions\ServerSolution\OrgAppServerPC\orm\orm.py", line 52, in __getattr__
+    raise AttributeError(r"'Model' object has no attribute '%s'" % key)
+AttributeError: 'Model' object has no attribute 'applylist'
+2016-03-03 20:22:56,487 - tornado.access - ERROR - 500 POST /joinact (127.0.0.1) 62.00ms
+2016-03-03 20:23:02,979 - tornado.application - ERROR - Uncaught exception POST /joinorg (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:888', method='POST', uri='/joinorg', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'X-Unity-Version': '4.6.1f1', 'Content-Length': '94', 'Accept-Encoding': 'identity', 'Accept': '*/*', 'User-Agent': 'UnityPlayer/4.6.1f1 (http://unity3d.com)', 'Host': 'localhost:888', 'Content-Type': 'application/x-www-form-urlencoded'})
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\tornado-4.3-py2.7-win32.egg\tornado\web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "F:\Solutions\ServerSolution\OrgAppServerPC\handlers\applyjoinOrgHandler.py", line 55, in post
+    if  Utils().isNull(org.applylist):
+  File "F:\Solutions\ServerSolution\OrgAppServerPC\orm\orm.py", line 52, in __getattr__
+    raise AttributeError(r"'Model' object has no attribute '%s'" % key)
+AttributeError: 'Model' object has no attribute 'applylist'
+2016-03-03 20:23:02,980 - tornado.access - ERROR - 500 POST /joinorg (127.0.0.1) 201.00ms
+2016-03-03 20:25:45,536 - tornado.access - INFO - 200 POST /register (127.0.0.1) 36.00ms
+2016-03-03 20:25:45,565 - tornado.access - INFO - 200 POST /register (127.0.0.1) 30.00ms
+2016-03-03 20:25:49,359 - tornado.access - INFO - 200 POST /register (127.0.0.1) 36.00ms
+2016-03-03 20:25:52,505 - tornado.access - INFO - 200 POST /createorg (127.0.0.1) 69.00ms
+2016-03-03 20:25:54,815 - tornado.access - INFO - 200 POST /createact (127.0.0.1) 103.00ms
+2016-03-03 20:25:57,976 - tornado.access - INFO - 200 POST /approveorg (127.0.0.1) 0.00ms
+2016-03-03 20:26:00,288 - tornado.access - INFO - 200 POST /approveact (127.0.0.1) 1.00ms
+2016-03-03 20:30:03,829 - tornado.application - ERROR - Uncaught exception POST /approveorg (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:888', method='POST', uri='/approveorg', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'X-Unity-Version': '4.6.1f1', 'Content-Length': '54', 'Accept-Encoding': 'identity', 'Accept': '*/*', 'User-Agent': 'UnityPlayer/4.6.1f1 (http://unity3d.com)', 'Host': 'localhost:888', 'Content-Type': 'application/x-www-form-urlencoded'})
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\tornado-4.3-py2.7-win32.egg\tornado\web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "F:\Solutions\ServerSolution\OrgAppServerPC\handlers\approveCreateOrg.py", line 70, in post
+    Dal_CreateOrg().updateCreateOrg(id,**updateArgs)
+  File "F:\Solutions\ServerSolution\OrgAppServerPC\dal\dal_createorg.py", line 16, in updateCreateOrg
+    return self.update(pk,CreateOrg,**kwargs)
+  File "F:\Solutions\ServerSolution\OrgAppServerPC\dal\dal_base.py", line 29, in update
+    if md.__mappings__[k].innertype == 'int':
+KeyError: 'state'
+2016-03-03 20:30:03,831 - tornado.access - ERROR - 500 POST /approveorg (127.0.0.1) 46.00ms
+2016-03-03 21:09:28,799 - tornado.access - INFO - 200 POST /register (127.0.0.1) 105.00ms
+2016-03-03 21:09:28,908 - tornado.access - INFO - 200 POST /register (127.0.0.1) 108.00ms
+2016-03-03 21:09:31,516 - tornado.access - INFO - 200 POST /register (127.0.0.1) 56.00ms
+2016-03-03 21:09:34,990 - tornado.access - INFO - 200 POST /createorg (127.0.0.1) 121.00ms
+2016-03-03 21:09:37,282 - tornado.access - INFO - 200 POST /createact (127.0.0.1) 104.00ms
+2016-03-03 21:09:40,138 - tornado.access - INFO - 200 POST /approveorg (127.0.0.1) 200.00ms
+2016-03-03 21:09:58,323 - tornado.access - INFO - 200 POST /approveact (127.0.0.1) 135.00ms
+2016-03-03 21:10:10,661 - tornado.access - INFO - 200 POST /joinorg (127.0.0.1) 100.00ms
+2016-03-03 21:10:33,381 - tornado.access - INFO - 200 POST /approvejoinorg (127.0.0.1) 0.00ms
+2016-03-03 21:12:08,016 - tornado.access - INFO - 200 POST /approvejoinorg (127.0.0.1) 43601.00ms
+2016-03-03 21:14:15,667 - tornado.application - ERROR - Uncaught exception POST /approvejoinorg (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:888', method='POST', uri='/approvejoinorg', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'X-Unity-Version': '4.6.1f1', 'Content-Length': '41', 'Accept-Encoding': 'identity', 'Accept': '*/*', 'User-Agent': 'UnityPlayer/4.6.1f1 (http://unity3d.com)', 'Host': 'localhost:888', 'Content-Type': 'application/x-www-form-urlencoded'})
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\tornado-4.3-py2.7-win32.egg\tornado\web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "F:/Solutions/ServerSolution/OrgAppServerPC\handlers\approveJoinOrg.py", line 76, in post
+    org.memlist = org.memlist + ';' + str(applyOrg.applyer) + ':' + configs_org['orgtitle']['worker']
+TypeError: coercing to Unicode: need string or buffer, int found
+2016-03-03 21:14:15,693 - tornado.access - ERROR - 500 POST /approvejoinorg (127.0.0.1) 5103.00ms
+2016-03-03 21:15:42,131 - tornado.access - INFO - 200 POST /approvejoinorg (127.0.0.1) 99.00ms
+2016-03-03 21:16:07,388 - tornado.access - INFO - 200 POST /joinact (127.0.0.1) 152.00ms
+2016-03-03 21:16:12,796 - tornado.access - INFO - 200 POST /approvejoinact (127.0.0.1) 129.00ms
+2016-03-03 21:25:26,197 - tornado.application - ERROR - Uncaught exception POST /pullorgdetail (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:888', method='POST', uri='/pullorgdetail', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'X-Unity-Version': '4.6.1f1', 'Content-Length': '38', 'Accept-Encoding': 'identity', 'Accept': '*/*', 'User-Agent': 'UnityPlayer/4.6.1f1 (http://unity3d.com)', 'Host': 'localhost:888', 'Content-Type': 'application/x-www-form-urlencoded'})
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\tornado-4.3-py2.7-win32.egg\tornado\web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "F:\Solutions\ServerSolution\OrgAppServerPC\handlers\pullOrgDetailsHandler.py", line 73, in post
+    respon_json = json.dumps(respon)
+  File "D:\Python27\lib\json\__init__.py", line 243, in dumps
+    return _default_encoder.encode(obj)
+  File "D:\Python27\lib\json\encoder.py", line 207, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "D:\Python27\lib\json\encoder.py", line 270, in iterencode
+    return _iterencode(o, 0)
+  File "D:\Python27\lib\json\encoder.py", line 184, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: datetime.datetime(2016, 3, 3, 21, 10, 10) is not JSON serializable
+2016-03-03 21:25:26,243 - tornado.access - ERROR - 500 POST /pullorgdetail (127.0.0.1) 46.00ms
+2016-03-03 21:26:27,348 - tornado.application - ERROR - Uncaught exception POST /pullorgdetail (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:888', method='POST', uri='/pullorgdetail', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'X-Unity-Version': '4.6.1f1', 'Content-Length': '38', 'Accept-Encoding': 'identity', 'Accept': '*/*', 'User-Agent': 'UnityPlayer/4.6.1f1 (http://unity3d.com)', 'Host': 'localhost:888', 'Content-Type': 'application/x-www-form-urlencoded'})
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\tornado-4.3-py2.7-win32.egg\tornado\web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "F:/Solutions/ServerSolution/OrgAppServerPC\handlers\pullOrgDetailsHandler.py", line 73, in post
+    respon_json = json.dumps(respon)
+  File "D:\Python27\lib\json\__init__.py", line 243, in dumps
+    return _default_encoder.encode(obj)
+  File "D:\Python27\lib\json\encoder.py", line 207, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "D:\Python27\lib\json\encoder.py", line 270, in iterencode
+    return _iterencode(o, 0)
+  File "D:\Python27\lib\json\encoder.py", line 184, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: datetime.datetime(2016, 3, 3, 21, 15, 42) is not JSON serializable
+2016-03-03 21:26:27,351 - tornado.access - ERROR - 500 POST /pullorgdetail (127.0.0.1) 20033.00ms
+2016-03-03 21:27:30,818 - tornado.application - ERROR - Uncaught exception POST /pullorgdetail (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:888', method='POST', uri='/pullorgdetail', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'X-Unity-Version': '4.6.1f1', 'Content-Length': '38', 'Accept-Encoding': 'identity', 'Accept': '*/*', 'User-Agent': 'UnityPlayer/4.6.1f1 (http://unity3d.com)', 'Host': 'localhost:888', 'Content-Type': 'application/x-www-form-urlencoded'})
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\tornado-4.3-py2.7-win32.egg\tornado\web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "F:/Solutions/ServerSolution/OrgAppServerPC\handlers\pullOrgDetailsHandler.py", line 73, in post
+    respon_json = json.dumps(respon)
+  File "D:\Python27\lib\json\__init__.py", line 243, in dumps
+    return _default_encoder.encode(obj)
+  File "D:\Python27\lib\json\encoder.py", line 207, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "D:\Python27\lib\json\encoder.py", line 270, in iterencode
+    return _iterencode(o, 0)
+  File "D:\Python27\lib\json\encoder.py", line 184, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: datetime.datetime(2016, 3, 3, 21, 15, 42) is not JSON serializable
+2016-03-03 21:27:30,819 - tornado.access - ERROR - 500 POST /pullorgdetail (127.0.0.1) 43470.00ms
+2016-03-03 21:35:25,913 - tornado.access - INFO - 200 POST /pullorgdetail (127.0.0.1) 13052.00ms
+2016-03-03 21:35:39,424 - tornado.application - ERROR - Uncaught exception POST /pullactdetail (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:888', method='POST', uri='/pullactdetail', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'X-Unity-Version': '4.6.1f1', 'Content-Length': '36', 'Accept-Encoding': 'identity', 'Accept': '*/*', 'User-Agent': 'UnityPlayer/4.6.1f1 (http://unity3d.com)', 'Host': 'localhost:888', 'Content-Type': 'application/x-www-form-urlencoded'})
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\tornado-4.3-py2.7-win32.egg\tornado\web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "F:/Solutions/ServerSolution/OrgAppServerPC\handlers\pullActDetailsHandler.py", line 42, in post
+    idlist = Utils().decodeIDFormat(post_data['actidlist'])
+KeyError: 'actidlist'
+2016-03-03 21:35:39,426 - tornado.access - ERROR - 500 POST /pullactdetail (127.0.0.1) 3.00ms
+2016-03-03 21:36:00,581 - tornado.application - ERROR - Uncaught exception POST /pullactdetail (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:888', method='POST', uri='/pullactdetail', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'X-Unity-Version': '4.6.1f1', 'Content-Length': '36', 'Accept-Encoding': 'identity', 'Accept': '*/*', 'User-Agent': 'UnityPlayer/4.6.1f1 (http://unity3d.com)', 'Host': 'localhost:888', 'Content-Type': 'application/x-www-form-urlencoded'})
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\tornado-4.3-py2.7-win32.egg\tornado\web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "F:/Solutions/ServerSolution/OrgAppServerPC\handlers\pullActDetailsHandler.py", line 42, in post
+    idlist = Utils().decodeIDFormat(post_data['actidlist'])
+KeyError: 'actidlist'
+2016-03-03 21:36:00,582 - tornado.access - ERROR - 500 POST /pullactdetail (127.0.0.1) 3.00ms
+2016-03-03 21:37:22,701 - tornado.application - ERROR - Uncaught exception POST /pullactdetail (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:888', method='POST', uri='/pullactdetail', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'X-Unity-Version': '4.6.1f1', 'Content-Length': '36', 'Accept-Encoding': 'identity', 'Accept': '*/*', 'User-Agent': 'UnityPlayer/4.6.1f1 (http://unity3d.com)', 'Host': 'localhost:888', 'Content-Type': 'application/x-www-form-urlencoded'})
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\tornado-4.3-py2.7-win32.egg\tornado\web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "F:/Solutions/ServerSolution/OrgAppServerPC\handlers\pullActDetailsHandler.py", line 42, in post
+    idlist = Utils().decodeIDFormat(post_data['actidlist'])
+KeyError: 'actidlist'
+2016-03-03 21:37:22,703 - tornado.access - ERROR - 500 POST /pullactdetail (127.0.0.1) 73639.00ms
+2016-03-03 21:37:29,706 - tornado.access - INFO - 200 POST /pullactdetail (127.0.0.1) 3167.00ms
+2016-03-03 21:37:42,375 - tornado.application - ERROR - Uncaught exception POST /pulluserdetail (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:888', method='POST', uri='/pulluserdetail', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'X-Unity-Version': '4.6.1f1', 'Content-Length': '42', 'Accept-Encoding': 'identity', 'Accept': '*/*', 'User-Agent': 'UnityPlayer/4.6.1f1 (http://unity3d.com)', 'Host': 'localhost:888', 'Content-Type': 'application/x-www-form-urlencoded'})
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\tornado-4.3-py2.7-win32.egg\tornado\web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "F:/Solutions/ServerSolution/OrgAppServerPC\handlers\pullStuDetailsHandler.py", line 73, in post
+    respon_json = json.dumps(respon)
+  File "D:\Python27\lib\json\__init__.py", line 243, in dumps
+    return _default_encoder.encode(obj)
+  File "D:\Python27\lib\json\encoder.py", line 207, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "D:\Python27\lib\json\encoder.py", line 270, in iterencode
+    return _iterencode(o, 0)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xff in position 0: invalid start byte
+2016-03-03 21:37:42,384 - tornado.access - ERROR - 500 POST /pulluserdetail (127.0.0.1) 28.00ms
+2016-03-03 21:39:39,828 - tornado.access - INFO - 200 POST /pulluserdetail (127.0.0.1) 10181.00ms
+2016-03-03 21:42:15,039 - tornado.access - INFO - 200 POST /pullcreateorgdetail (127.0.0.1) 3.00ms
+2016-03-03 21:42:19,578 - tornado.access - INFO - 200 POST /pullcreateactdetail (127.0.0.1) 1.00ms
+2016-03-03 21:42:22,522 - tornado.application - ERROR - Uncaught exception POST /pullallorg (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:888', method='POST', uri='/pullallorg', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'X-Unity-Version': '4.6.1f1', 'Content-Length': '28', 'Accept-Encoding': 'identity', 'Accept': '*/*', 'User-Agent': 'UnityPlayer/4.6.1f1 (http://unity3d.com)', 'Host': 'localhost:888', 'Content-Type': 'application/x-www-form-urlencoded'})
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\tornado-4.3-py2.7-win32.egg\tornado\web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "F:/Solutions/ServerSolution/OrgAppServerPC\handlers\pullAllIDHandler.py", line 42, in post
+    if post_data['type'] == '0':
+KeyError: 'type'
+2016-03-03 21:42:22,533 - tornado.access - ERROR - 500 POST /pullallorg (127.0.0.1) 13.00ms
+2016-03-03 21:43:18,348 - tornado.application - ERROR - Uncaught exception POST /pullallorg (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:888', method='POST', uri='/pullallorg', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'X-Unity-Version': '4.6.1f1', 'Content-Length': '28', 'Accept-Encoding': 'identity', 'Accept': '*/*', 'User-Agent': 'UnityPlayer/4.6.1f1 (http://unity3d.com)', 'Host': 'localhost:888', 'Content-Type': 'application/x-www-form-urlencoded'})
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\tornado-4.3-py2.7-win32.egg\tornado\web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "F:/Solutions/ServerSolution/OrgAppServerPC\handlers\pullAllIDHandler.py", line 42, in post
+    if post_data['type'] == '0':
+KeyError: 'type'
+2016-03-03 21:43:18,349 - tornado.access - ERROR - 500 POST /pullallorg (127.0.0.1) 39991.00ms
+2016-03-03 21:43:21,819 - tornado.application - ERROR - Uncaught exception POST /pullallorg (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:888', method='POST', uri='/pullallorg', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'X-Unity-Version': '4.6.1f1', 'Content-Length': '22', 'Accept-Encoding': 'identity', 'Accept': '*/*', 'User-Agent': 'UnityPlayer/4.6.1f1 (http://unity3d.com)', 'Host': 'localhost:888', 'Content-Type': 'application/x-www-form-urlencoded'})
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\tornado-4.3-py2.7-win32.egg\tornado\web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "F:/Solutions/ServerSolution/OrgAppServerPC\handlers\pullAllIDHandler.py", line 43, in post
+    result = Dal_Org().getAllID()
+  File "F:/Solutions/ServerSolution/OrgAppServerPC\dal\dal_base.py", line 79, in getAllID
+    for k,v in self._m_cache.iteritems:
+TypeError: 'builtin_function_or_method' object is not iterable
+2016-03-03 21:43:21,842 - tornado.access - ERROR - 500 POST /pullallorg (127.0.0.1) 765.00ms
+2016-03-03 21:43:36,818 - tornado.application - ERROR - Uncaught exception POST /pullallorg (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:888', method='POST', uri='/pullallorg', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'X-Unity-Version': '4.6.1f1', 'Content-Length': '22', 'Accept-Encoding': 'identity', 'Accept': '*/*', 'User-Agent': 'UnityPlayer/4.6.1f1 (http://unity3d.com)', 'Host': 'localhost:888', 'Content-Type': 'application/x-www-form-urlencoded'})
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\tornado-4.3-py2.7-win32.egg\tornado\web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "F:/Solutions/ServerSolution/OrgAppServerPC\handlers\pullAllIDHandler.py", line 43, in post
+    result = Dal_Org().getAllID()
+  File "F:/Solutions/ServerSolution/OrgAppServerPC\dal\dal_base.py", line 79, in getAllID
+    for k,v in self._m_cache.iteritems:
+TypeError: 'builtin_function_or_method' object is not iterable
+2016-03-03 21:43:36,819 - tornado.access - ERROR - 500 POST /pullallorg (127.0.0.1) 2786.00ms
+2016-03-03 21:44:25,694 - tornado.access - INFO - 200 POST /pullallorg (127.0.0.1) 0.00ms

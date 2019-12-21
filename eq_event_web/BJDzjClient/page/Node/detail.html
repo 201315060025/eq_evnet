@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap-responsive.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <script src="../../js/jquery-1.8.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="../../js/bootstrap.js"></script>
+    <script type="text/javascript" src="../../js/ckform.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+	<script type="text/javascript" src="../../js/JSConfig.js"></script>
+	<script type="text/javascript" src="../../js/SmObjects.js"></script>
+	<script type="text/javascript" src="../../js/bootstrap-paginator.js"></script>
+	<script type="text/javascript" src="../../js/config.js"></script>
+	<script src="../../js/netWorket.js" type="text/javascript" charset="utf-8"></script>
+
+    <style type="text/css">
+        body {
+            padding-bottom: 40px;
+        }
+        .sidebar-nav {
+            padding: 9px 0;
+        }
+
+        @media (max-width: 980px) {
+            /* Enable use of floated navbar text */
+            .navbar-text.pull-right {
+                float: none;
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+        }
+        .txt
+		{
+		   width:700px;
+		}
+		.largeTXT
+		{
+		   width:700px;height:300px;
+		}
+    </style>
+</head>
+<body>
+<form class="definewidth m20">
+<input type="hidden" name="id" value="" />
+<table class="table table-bordered table-hover ">
+    <tr>
+        <td width="10%" class="tableleft">编号</td>
+        <td><input class="txt"  type="text" id="eqid" value=""/></td>
+    </tr>
+    <tr>
+        <td class="tableleft">名称</td>
+        <td><input class="txt" type="text" id="eqname" value=""/></td>
+    </tr>
+	<tr>
+        <td class="tableleft">经度</td>
+        <td><input class="txt"  type="text" id="longitude" value=""/></td>
+    </tr>
+	<tr>
+        <td class="tableleft">纬度</td>
+        <td><input class="txt"  type="text" id="latitude" value=""/></td>
+    </tr>
+	<tr>
+        <td class="tableleft">震级</td>
+        <td><input class="txt"  type="text" id="level" value=""/></td>
+    </tr>
+	<tr>
+        <td class="tableleft">震源类型</td>
+        <td><input class="txt"  type="text" id="leveltype" value=""/></td>
+    </tr>
+	<tr>
+        <td class="tableleft">震源深度</td>
+        <td><input class="txt"  type="text" id="depth" value="" /></td>
+    </tr>
+	<tr>
+        <td class="tableleft">日期</td>
+        <td><input class="txt"  type="text" id="date" value=""/></td>
+    </tr>
+	<tr>
+        <td class="tableleft">说明文字</td>
+		<td><textarea class="largeTXT" id="introduction" value=""></textarea></td>
+    </tr>
+    <tr>
+        <td class="tableleft">附件</td>
+        <td >
+        	<div id="file">
+
+        	</div>
+            <!--<input type="radio" name="status" value="0" id="use"
+                    <eq name="user.status" value='0'></eq>启用
+              <input type="radio" name="status" value="1"id="forbid"
+                    <eq name="user.status" value='1'></eq>禁用-->
+        </td>
+    </tr>
+    <tr>
+        <td class="tableleft"></td>
+        <td>
+
+            <!--<button type="button" class="btn btn-primary" id="btn-primary" type="button">保存</button> &nbsp;&nbsp;<button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>-->
+        </td>
+    </tr>
+</table>
+</form>
+</body>
+</html>
+<script>
+    $(function () {
+    	earthquake_id=window.location.search;
+		earthquake_id=earthquake_id.substr(4,earthquake_id.length);
+		var dataMsg ={"earthquake_id":earthquake_id};
+		SendMsgRouleGet(dataMsg,config.roule.getquerythquakeinfobyid,ongetEditEarthquakeCallback,"json");
+       })
+
+    function ongetEditEarthquakeCallback(data){
+    	console.log(data);
+    	if(data.status===config.errorCode.success){
+    	     $('#eqid').val(data.data.id);
+    	     $('#eqname').val(data.data.eqname);
+    	     $('#longitude').val(data.data.longitude);
+    	     $('#latitude').val(data.data.latitude);
+    	     $('#level').val(data.data.eq_level);
+    	     $('#leveltype').val("");
+    	     $('#depth').val(data.data.depth);
+    	     $('#date').val(data.data.date);
+    	     $('#introduction').val(data.data.introduction);
+    	     var flieobj = JSON.parse(data.data.attachment);
+    	     var newHtml = "";
+    	     for (var i=0;i<flieobj.length;i++) {
+    	     	var filePath = "/static"+flieobj[i].fjpath;
+                 console.info(flieobj[i].fjpath);
+                // 详情界面 用户点击就是下载
+    	     	newHtml +='<div onclick=\''+'downloadFile("'+filePath+'")\'><a>'+flieobj[i].fjname+'</a></div>'
+    	     }
+    	    $("#file").html(newHtml);
+    	 }
+    }
+
+    function downloadFile(filePath){
+        /*
+        * 下载附件
+        * */
+        // alert("123");
+    	window.open(config.baseUrl+filePath);
+    }
+
+
+
+		$('#backid').click(function(){
+				window.location.href="index.html";
+		 });
+
+
+		 //保存
+	    $("#btn-primary").click(function(){
+//            getedit();
+            editEarthquake();
+    });
+
+    function getedit()
+    {
+
+    }
+
+    function editEarthquake()
+    {
+	    	if($("#use").checked="checked")
+	    	{
+	    		status=$("#use").val();
+	    	}
+	    	else
+	    	{
+	    		status=$("#forbid").val();
+	    	}
+
+	    	var dataMsg ={
+	    			"earthquake_id":earthquake_id,
+	    			"eqname":$("#eqname").val(),
+	    			"lon":$("#longitude").val().toString(),
+	    			"lan":$("#latitude").val().toString(),
+	    			"eq_level":$("#level").val(),
+	    			"eq_depth":$("#depth").val(),
+	    		    "happen_time":$("#data").val(),
+	    			"eq_explain":$("#introduction").val(),
+	    			"user_status":status
+	    	}
+	    	SendMsgRouleGet(dataMsg,config.roule.saveearthquakeinfo,oneaitEarthquakeCallback);
+    }
+    function oneaitEarthquakeCallback(jsoncallback){
+    	if(jsoncallback.status ===config.errorCode.success){
+    		alert("编辑保存成功");
+    	}
+    }
+
+
+</script>

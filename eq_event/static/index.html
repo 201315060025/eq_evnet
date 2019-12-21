@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>基于WebGIS的地震滑坡管理系统平台</title>
+    <!-- 告诉浏览器适应屏幕宽度 -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <!--<link rel="stylesheet" type="text/css" href="css/fonts-awesome.css"/>-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<!-- DataTables -->
+    <link rel="stylesheet" href="css/dataTables.bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/page.css"/>
+    <!-- Ionicons -->
+    <!--<link rel="stylesheet" href="css/datatables/ionicons.min.css">-->
+    <!-- 主题风格 -->
+    <link rel="stylesheet" href="css/AdminLTE.min.css">
+    <!-- AdminLTE 皮肤. 选择从 css/skins文件夹，而不是下载所有，以减少负载。-->
+    <link rel="stylesheet" href="css/_all-skins.min.css">
+    <style type="text/css">
+    	#introduction{
+    	/*	display: none !important;*/
+    	}
+    	.pagefy{
+    		/*margin-left: 30%;*/
+    		text-align: center;
+    	}
+    	table{
+    		width: 100%;
+    	}
+    	.pagefy span{
+    		display: inline-block;
+    		width: 50px;
+    		height: 30px;
+    		line-height: 30px;
+    		border-radius: 2px;
+    		margin-left: 5px;
+    		border: solid 1px #999999;
+    	}
+    	table.dataTable thead > tr > th{width: 300px;}
+    	table.dataTable #example2{width: 100%;}
+    	/*table.dataTable #example2  tr td{width: 120px;display: inline-block;float: left;}*/
+   
+    </style>
+  </head>
+  <body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+      <header class="main-header">
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+          <!-- mini logo for sidebar mini 50x50 pixels -->
+          <span class="logo-mini"><b>Lo</b>go</span>
+          <!-- logo for regular state and mobile devices -->
+          <span class="logo-lg"><b>Logo</b></span>
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" role="navigation">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">切换导航</span>
+          </a>
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              <!-- Messages: style can be found in dropdown.less-->
+              <li class="dropdown messages-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-envelope-o"></i>
+                  <span class="label label-success">4</span>
+                </a>
+              </li>
+              <!-- Notifications: style can be found in dropdown.less -->
+              <li class="dropdown notifications-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-bell-o"></i>
+                  <span class="label label-warning">10</span>
+                </a>
+              </li>
+              <!-- Tasks: style can be found in dropdown.less -->
+              <li class="dropdown tasks-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-flag-o"></i>
+                  <span class="label label-danger">9</span>
+                </a>
+              </li>
+              <!-- User Account: style can be found in dropdown.less -->
+              <li class="dropdown user user-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <img src="img/user2-160x160.jpg" class="user-image" alt="User Image">
+                  <span class="hidden-xs">系统管理员</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+          <!-- Sidebar user panel -->
+          <div class="user-panel">
+            <div class="pull-left image">
+              <img src="img/user2-160x160.jpg" class="img-circle" alt="User Image">
+            </div>
+            <div class="pull-left info">
+              <p>系统管理员</p>
+              <a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
+            </div>
+          </div>
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+          <ul class="sidebar-menu">
+            <!--<li class="header">MAIN NAVIGATION</li>-->
+            <li class="active treeview">
+              <a href="#">
+                <i class="fa fa-dashboard"></i> <span>地震查看</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li class="active"><a id="gotoMap"><i class="fa fa-circle-o"></i> 地图浏览</a></li>
+                <li><a id="gotoList"><i class="fa fa-circle-o"></i> 列表浏览</a></li>
+				<li><a  id="gotoALL"><i class="fa fa-circle-o"></i> 图属关联</a></li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <h1>
+            地震滑坡
+            <small>管理平台</small>
+          </h1>
+          <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i>主页</a></li>
+            <li class="active">地图浏览</li>
+          </ol> 
+        </section>
+        <!-- Main content -->
+        <section id="SecMap" class="content">
+          <!-- Main row -->
+          <div class="row">
+            <!-- right col (We are only adding the ID to make the widgets sortable)-->
+            <section class="col-lg-12 connectedSortable">
+              <!-- Map box -->
+              <div class="box box-solid bg-light-blue-gradient">
+                <div class="box-header">
+                  <div class="pull-right box-tools">
+                    <button class="btn btn-primary btn-sm daterange pull-right" data-toggle="tooltip" title="Date range"><i class="fa fa-calendar"></i></button>
+                    <button class="btn btn-primary btn-sm pull-right" data-widget="collapse" data-toggle="tooltip" title="Collapse" style="margin-right: 5px;"><i class="fa fa-minus"></i></button>
+                  </div>
+                  <i class="fa fa-map-marker"></i>
+                  <h3 class="box-title">
+                    地图浏览
+                  </h3>
+                </div>
+                <div class="box-body">
+                  <div id="googleMap" style="height: 600px; width: 100%;"></div>
+                </div>
+				<div style="position: relative;">
+				   <ul id="bp-3-element-test">
+				   </ul>
+				</div>
+              </div>
+            </section>
+          </div>
+        </section>
+		<!-- Main content -->
+        <section id="SecList"  class="content">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="box">
+                <div class="box-header">
+                  <h3 class="box-title">地震记录列表</h3>
+                </div><!-- /.box-header -->
+                <div class="box-body">
+				  			<div>
+								  <div class="input-group">
+									 <span class="input-group-addon">地震名称</span>
+									 <input id="eqname" type="text" class="form-control"  >
+									 <span class="input-group-addon">震级</span>
+									 <input id="eqlevel" type="text" class="form-control" >
+									 <span class="input-group-addon">-</span>
+									 <input id="eqlevel1" type="text" class="form-control" >
+									 <span class="input-group-addon">震源深度</span>
+									 <input id="eqdepth" type="text" class="form-control" >
+									 <span class="input-group-addon">-</span>
+									 <input id="eqdepth1" type="text" class="form-control" >
+									 <span id="btnSearch" class="input-group-addon btn btn-primary" onclick="searchShockP();">搜索</span>
+								  </div>
+				  			</div>
+                  <table id="example1" class="table table-bordered table-striped">
+                    <thead>
+                      <tr>
+                        <th>地震点ID</th>
+												<th>地震名称</th>
+												<th>经度</th>
+												<th>纬度</th>
+												<th>震级</th>
+												<th>震级类型</th>
+												<th>震源深度</th>
+												<th>详细信息</th>
+                      </tr>
+                    </thead>
+                    <!--<tbody id ="example2">
+                    </tbody>-->
+                  </table >
+                  
+                </div><!-- /.box-body -->
+               
+			
+					 <!--<ul id="demoContent"></ul>-->
+ 						<ul class="page" id="page"></ul>
+				   <!--<ul id="bp-3-element-test1">
+				   </ul>-->
+				
+				
+              </div><!-- /.box -->
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+        </section><!-- /.content -->
+        <!--<div>
+        	<ul class="pagination pagination-lg pagefy" id="pages">
+				    <span class="page-item"><a class="page-link" href="#">首页</a></span>
+				    <span class="page-item"><a class="page-link" href="#">上一页</a></span>
+				    <span class="page-item"><a class="page-link" href="#">1</a></span>
+				    <span class="page-item"><a class="page-link" href="#">2</a></span>
+				    <span class="page-item"><a class="page-link" href="#">3</a></span>
+						<span class="page-item"><a class="page-link" href="#">下一页</a></span>
+						<span class="page-item"><a class="page-link" href="#">尾页</a></span>
+			  	</ul>
+        </div>-->
+		<section id="introduction">
+			<div class="row">
+				<div class="col-sm-5">
+					<!--小地图-->
+				   <div id="mappiont" style="height: 400px; width: 500px;"></div>
+				</div>
+				<div id="txtIntro" class="col-sm-7">
+					  <h2 class="page-header"><a href="#introduction">地震点介绍</a></h2>
+					  <p class="lead">
+						<b>AdminLTE</b> is a popular open source WebApp template for admin dashboards and control panels.
+						It is a responsive HTML template that is based on the CSS framework Bootstrap 3.
+						It utilizes all of the Bootstrap components in its design and re-styles many
+						commonly used plugins to create a consistent design that can be used as a user
+						interface for backend applications. AdminLTE is based on a modular design, which
+						allows it to be easily customized and built upon. This documentation will guide you through
+						installing the template and exploring the various components that are bundled with the template.
+					  </p>
+				</div>
+			</div>
+			<h2 class="page-header"><a href="#download">下载</a></h2>
+		  <p class="lead">
+			以下附件为与地震点相关的文档，欢迎下载查看
+		  </p>
+		  <div class="row">
+			<div class="col-sm-12">
+			  <div id="fj" class="box box-primary">
+				<div class="box-header with-border">
+				  <h3 class="box-title">下载附件</h3>
+				  <span class="label label-primary pull-right"><i class="fa fa-html5"></i></span>
+				</div><!-- /.box-header -->
+				<div class="box-body">
+				  <p>青海省海西蒙古族藏族自治州地震信息.doc</p>
+				  <p>青海省海西蒙古族藏族自治州地震受灾情况.doc</p>
+				  <p>青海省海西蒙古族藏族自治州地震滑坡情况.doc</p>
+				  <a href="" class="btn btn-primary"><i class="fa fa-download"></i> Download</a>
+				</div><!-- /.box-body -->
+			  </div><!-- /.box -->
+			</div><!-- /.col -->
+		  </div><!-- /.row -->
+		</section><!-- /#introduction -->
+      </div>
+      <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+          <b>版本</b> 2.3.0
+        </div>
+        <strong>版权所有 &copy; 2015-2016 <a href="#">北京遥图科技有限公司</a>.</strong> 保留所有权利.
+      </footer>      
+    </div><!-- ./wrapper -->
+    <!-- jQuery 1.11.3 -->
+    <!--<script src="js/jquery-1.11.3.min.js"></script>-->
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <!--<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>-->
+    <!-- Bootstrap 3.3.5 -->
+    <script src="js/bootstrap.min.js"></script>
+	<!-- DataTables -->
+    <!--<script src="plugins/datatables/jquery.dataTables.min.js"></script>-->
+	<script src="js/jquery.dataTables.js"></script>
+    <!--<script src="js/dataTables.bootstrap.min.js"></script>-->
+    <!-- AdminLTE App -->
+    <script src="js/app.min.js"></script>
+	<!-- Paginator -->
+	<script src="js/bootstrap-paginator.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <!--加载配置文件-->
+    <script src="js/config.js" type="text/javascript" charset="utf-8"></script>
+	<!--加载谷歌地图-->
+	<script type="text/javascript" src="http://ditu.google.cn/maps/api/js?sensor=false"></script>  
+	<!--<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBzE9xAESye6Kde-3hT-6B90nfwUkcS8Yw&sensor=false"></script>-->
+	<script src="js/JSConfig.js"></script>
+	<script src="js/SmObjects.js"></script>
+	<script src="js/loadmap.js"></script>
+	<!--<script src="js/page.js" type="text/javascript" charset="utf-8"></script>-->
+	<script src="js/search_ShockP.js" type="text/javascript" charset="utf-8"></script>
+	
+  <script src="js/demo.js"></script>
+	<!-- page script -->
+    <script>
+      $(function () {
+        $("#example1").DataTable({
+		  		"paging": false,
+          "lengthChange": false,
+          "searching": false,
+          "ordering": true,
+          "info": false,
+          "autoWidth": true
+		});
+		
+		
+//		$('#example1').children('tbody').hide()
+		
+      });
+     
+      
+//    
+//function initialize()
+//{
+//var mapProp = {
+//center:new google.maps.LatLng(33.508742,116.120850),
+//zoom:5,
+//mapTypeId:google.maps.MapTypeId.ROADMAP
+//};
+//var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+//}
+//
+//google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+
+  </body>
+</html>

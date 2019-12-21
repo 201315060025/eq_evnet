@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap-responsive.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <script type="text/javascript" src="../../js/jquery.js"></script>
+    <!--<script type="text/javascript" src="../../js/jquery.sorted.js"></script>-->
+    <script type="text/javascript" src="../../js/bootstrap.js"></script>
+    <script type="text/javascript" src="../../js/ckform.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <!--<script type="text/javascript" src="../../js/config_data_user.js"></script>-->
+    	
+   
+ 
+
+    <style type="text/css">
+        body {
+            padding-bottom: 40px;
+        }
+        .sidebar-nav {
+            padding: 9px 0;
+        }
+
+        @media (max-width: 980px) {
+            /* Enable use of floated navbar text */
+            .navbar-text.pull-right {
+                float: none;
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+<form class="definewidth m20">
+<input type="hidden" name="id" value="{$user.id}" />
+    <table class="table table-bordered table-hover definewidth m10">
+        <tr>
+            <td width="10%" class="tableleft">登录名</td>
+            <td><input type="text" name="username" value="" id="username"/></td>
+        </tr>
+        <tr>
+            <td class="tableleft">密码</td>
+            <td><input type="text" name="password" id="password"/></td>
+        </tr>
+        <tr>
+            <td class="tableleft">真实姓名</td>
+            <td><input type="text" name="realname" value="" id="real_name"/></td>
+        </tr>
+        <tr>
+            <td class="tableleft">邮箱</td>
+            <td><input type="text" name="email" value="" id="email"/></td>
+        </tr>
+        <tr>
+            <td class="tableleft">状态</td>
+            <td>
+                <input type="radio" name="status" value="0" id="use"
+                    <eq name="user.status" value='0'></eq>启用
+              <input type="radio" name="status" value="1"id="forbid"
+                    <eq name="user.status" value='1'></eq>禁用
+            </td>
+        </tr>
+        <tr>
+            <td class="tableleft">角色</td>
+            <td><input type="text" name="role" id="role"/></td>
+        </tr>
+        <tr>
+            <td class="tableleft"></td>
+            <td>
+                <button type="button" class="btn btn-primary" id="btn" type="button">保存</button>				 &nbsp;&nbsp;<button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
+<script src="../../js/config.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/netWorket.js" type="text/javascript" charset="utf-8"></script>
+<script>
+
+    $(function () { 
+    	
+    	editUserInfo();
+		$('#backid').click(function(){
+				window.location.href="index.html";
+		 });
+		 
+		  $("#btn").click(function()
+		 {
+		 	saveUserInfo();
+		 })
+		 
+
+    });
+    var uid=window.location.search;
+    var uid=uid.substr(9,uid.length);
+    console.log(uid);
+	 var html='';
+function editUserInfo(){
+	var dataMsg = {"user_id":uid};
+	SendMsgRouleGet(dataMsg,config.roule.edituserinfo,oneditUserInfoCallback);
+}
+
+function oneditUserInfoCallback(jsoncallback){
+	if(jsoncallback.status===config.errorCode.success){
+		$("#username").val(jsoncallback.data.DLM);
+		$("#password").val(jsoncallback.data.MM);
+		$("#real_name").val(jsoncallback.data.XM);
+		$("#email").val(jsoncallback.data.YX);
+		$("role").val(jsoncallback.data.role);
+		if(jsoncallback.data.status==0)
+		{
+			$("#use").checked="checked";
+		}
+		else
+		{
+			$("#forbid").checked="checked";
+		}
+		
+    }
+}
+
+
+function saveUserInfo()
+    {
+    	if($("#use").checked="checked")
+    	{
+    		status=$("#use").val();
+    	}
+    	else
+    	{
+    		status=$("#forbid").val();
+    	}
+    	var dataMsg = {
+		    "user_id":uid,
+		    "login_name":$("#username").val,
+		    "true_name":$("#real_name").val(),
+		    "pwd":$("#password").val(),
+		    "email":$("#email").val(),
+		    "user_role":$("#role").val(),
+		    "user_status":status
+    	}
+    	SendMsgRouleGet(dataMsg,config.roule.saveuserinfo,onaddUserCallback);
+    }
+    function onaddUserCallback(jsoncallback){
+    	if(jsoncallback.status === config.errorCode.success){
+    		alert("修改成功");
+    	}
+    }
+
+</script>

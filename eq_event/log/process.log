@@ -1,0 +1,4 @@
+2018-12-29 21:03:28,338 eqoperation.py[line:186][12912][INFO] [+] delete old excel..
+2018-12-29 21:03:37,321 eqoperation.py[line:210][12912][INFO] [+] create excel is success..
+2018-12-29 21:03:49,019 web.py[line:1946][12912][INFO] 200 GET /getcode/2640 (::1) 255.00ms
+2018-12-29 21:04:07,319 web.py[line:1946][12912][INFO] 200 GET /login?jsoncallback=jQuery1113022395224436521688_1546088484410&user=admin&pwd=1&code=aced&_=1546088484417 (::1) 441.00ms

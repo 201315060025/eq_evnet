@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../Css/bootstrap-responsive.css" />
+    <link rel="stylesheet" type="text/css" href="../Css/style.css" />
+    <script type="text/javascript" src="../Js/jquery-1.11.3.min.js"></script>   
+    <script type="text/javascript" src="../Js/bootstrap.js"></script>
+    <script type="text/javascript" src="../Js/ckform.js"></script>
+    <script type="text/javascript" src="../Js/common.js"></script>
+	<script type="text/javascript" src="../Js/JSConfig.js"></script>
+	<script type="text/javascript" src="../Js/SmObjects.js"></script>
+	<script type="text/javascript" src="../Js/bootstrap-paginator.js"></script>	
+	<script type="text/javascript" src="../Js/EditData.js"></script>
+	
+
+    <style type="text/css">
+        body {
+            padding-bottom: 40px;
+        }
+        .sidebar-nav {
+            padding: 9px 0;
+        }
+
+        @media (max-width: 980px) {
+            /* Enable use of floated navbar text */
+            .navbar-text.pull-right {
+                float: none;
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+        }
+        .txt
+		{
+		   width:700px;
+		}
+		.largeTXT
+		{
+		   width:700px;height:300px;
+		}
+    </style>
+</head>
+<body>
+<form action="index.html" method="post" class="definewidth m20">
+<input type="hidden" name="id" value="" />
+<table class="table table-bordered table-hover ">
+    <tr>
+        <td width="10%" class="tableleft">编号</td>
+        <td><input class="txt"  type="text" id="eqid"/></td>
+    </tr>
+    <tr>
+        <td class="tableleft">名称</td>
+        <td><input class="txt" type="text" id="eqname"/></td>
+    </tr>   
+	<tr>
+        <td class="tableleft">经度</td>
+        <td><input class="txt"  type="text" id="longitude"/></td>
+    </tr>  
+	<tr>
+        <td class="tableleft">纬度</td>
+        <td><input class="txt"  type="text" id="latitude"/></td>
+    </tr>  
+	<tr>
+        <td class="tableleft">震级</td>
+        <td><input class="txt"  type="text" id="level"/></td>
+    </tr>  
+	<tr>
+        <td class="tableleft">震源类型</td>
+        <td><input class="txt"  type="text" id="leveltype"/></td>
+    </tr>  
+	<tr>
+        <td class="tableleft">震源深度</td>
+        <td><input class="txt"  type="text" id="depth"/></td>
+    </tr>  
+	<tr>
+        <td class="tableleft">日期</td>
+        <td><input class="txt"  type="text" id="date"/></td>
+    </tr>  
+	<tr>
+        <td class="tableleft">说明文字</td>
+		<td><textarea class="largeTXT" id="introduction"></textarea></td>
+    </tr> 
+    <tr>
+        <td class="tableleft">附件</td>
+        <td >
+            <input type="radio" name="status" value="1" checked/> 启用
+           <input type="radio" name="status" value="0" /> 禁用
+        </td>
+    </tr>
+    <tr>
+        <td class="tableleft"></td>
+        <td>
+            <button type="submit" class="btn btn-primary" type="button">保存</button> &nbsp;&nbsp;<button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
+        </td>
+    </tr>
+</table>
+</form>
+</body>
+</html>
+<script>
+    $(function () {       
+		$('#backid').click(function(){
+				window.location.href="index.html";
+		 });
+
+    });
+</script>
