@@ -4,13 +4,9 @@ configs_app = {
        'db': {
            'host': '127.0.0.1',
            'port': 3306,
-           'user': 'root',
-            # 'passwd':'123456',
-            # 'passwd': 'blx123',
-            'passwd':'wn123456',
-            # 'db':'orgapp',
+           'user': '*****',
+            'passwd':'*****',
             'db': 'eqls',
-            ##'db':'wang_armyapp',
             'charset': 'utf8',
             'cursorclass': 'MYSQLdb.cursors.DictCursor',
             'tables': {
